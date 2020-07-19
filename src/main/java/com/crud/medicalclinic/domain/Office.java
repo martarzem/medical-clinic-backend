@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Office extends GenericEntity{
+public class Office {
+    private long id;
     private int number;
     private String description;
 }

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OfficeDto {
+    private long id;
     private int number;
     private String description;
 }

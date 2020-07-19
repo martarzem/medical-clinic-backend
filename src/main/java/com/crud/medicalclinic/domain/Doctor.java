@@ -4,15 +4,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Doctor extends GenericEntity {
+public class Doctor {
+    private long id;
     private String name;
     private String lastname;
     private String specialisation;
-    private List<Appointment> appointments = new ArrayList<>();
+    private String review;
 }

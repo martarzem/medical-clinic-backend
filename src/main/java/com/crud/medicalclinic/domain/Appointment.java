@@ -9,7 +9,8 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Appointment extends GenericEntity {
+public class Appointment {
+    private long id;
     private Office office;
     private Patient patient;
     private Doctor doctor;
