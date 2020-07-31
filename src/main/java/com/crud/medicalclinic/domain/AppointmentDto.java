@@ -1,14 +1,16 @@
 package com.crud.medicalclinic.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 
-@Getter
+@Data
 public class AppointmentDto {
     private long id;
     private Office office;
@@ -18,7 +20,7 @@ public class AppointmentDto {
     private String status;
     private List<String> purposes;
 
-    @Getter
+    @Data
     public static class AppointmentDtoBuilder {
         private long id;
         private Office office;
@@ -75,6 +77,7 @@ public class AppointmentDto {
         this.office = office;
         this.patient = patient;
         this.doctor = doctor;
+        this.date = date;
         this.status = status;
         this.purposes = new ArrayList<>(purposes);
     }
