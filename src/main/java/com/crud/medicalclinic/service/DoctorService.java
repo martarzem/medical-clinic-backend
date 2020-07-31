@@ -30,4 +30,8 @@ public class DoctorService {
     public void deleteById(long id) {
         doctorRepository.deleteById(id);
     }
+
+    public List<Doctor> getByLastname(String lastname) {
+        return doctorRepository.findByLastname(lastname);
+    }
 }

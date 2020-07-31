@@ -26,6 +26,11 @@ public class DoctorController {
         return doctorMapper.mapToDoctorDto(doctorService.get(doctorId).orElseThrow(IdNotFoundException::new));
     }
 
+    @GetMapping("/{doctorLastname}")
+    public List<DoctorDto> getByLastname(@PathVariable String doctorLastname) throws IdNotFoundException {
+        return doctorMapper.mapToDoctorDtoList(doctorService.getByLastname(doctorLastname));
+    }
+
     @PostMapping
     public void create(@RequestBody DoctorDto doctorDto) {
         doctorService.save(doctorMapper.mapToDoctor(doctorDto));
