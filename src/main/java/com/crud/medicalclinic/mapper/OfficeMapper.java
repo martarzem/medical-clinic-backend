@@ -2,7 +2,12 @@ package com.crud.medicalclinic.mapper;
 
 import com.crud.medicalclinic.domain.Office;
 import com.crud.medicalclinic.domain.OfficeDto;
+import com.crud.medicalclinic.domain.Patient;
+import com.crud.medicalclinic.domain.PatientDto;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class OfficeMapper {
@@ -20,5 +25,11 @@ public class OfficeMapper {
                 office.getNumber(),
                 office.getDescription()
         );
+    }
+
+    public List<OfficeDto> mapToOfficeDtoList(final List<Office> officeList) {
+        return officeList.stream()
+                .map(o -> new OfficeDto(o.getId(), o.getNumber(), o.getDescription()))
+                .collect(Collectors.toList());
     }
 }
