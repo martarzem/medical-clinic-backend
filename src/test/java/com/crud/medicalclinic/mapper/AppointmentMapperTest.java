@@ -60,9 +60,8 @@ public class AppointmentMapperTest {
         assertEquals(1, result.getOffice().getNumber());
         assertEquals("lastname", result.getPatient().getLastname());
         assertEquals("specialisation", result.getDoctor().getSpecialisation());
-        //assertEquals(LocalDate.of(2020,07,28), result.getDate());
+        assertEquals(LocalDate.of(2020,07,28), result.getDate());
         assertEquals("status", result.getStatus());
-        //assertEquals(0, result.getPurposes().size());
     }
 
     @Test

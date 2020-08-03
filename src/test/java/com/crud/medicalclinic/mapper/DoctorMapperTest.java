@@ -2,8 +2,6 @@ package com.crud.medicalclinic.mapper;
 
 import com.crud.medicalclinic.domain.Doctor;
 import com.crud.medicalclinic.domain.DoctorDto;
-import com.crud.medicalclinic.domain.Office;
-import com.crud.medicalclinic.domain.OfficeDto;
 import org.junit.Before;
 import org.junit.Test;
 
